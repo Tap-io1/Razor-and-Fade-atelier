@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Razor & Fade Atelier</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #080808;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 25px 20px 35px;
+    text-align: center;
+}
+
+/* LOGO */
+
+.logo-wrapper {
+    width: 100%;
+    height: 300px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 12px;
+}
+
+.logo {
+    width: 300px;
+    height: 300px;
+
+    max-width: 90vw;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+/* STORE NAME */
+
+.store-name {
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #ffffff;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+/* ADDRESS */
+
+.address {
+    font-size: 14px;
+    color: #bdbdbd;
+    margin-bottom: 23px;
+}
+
+/* DIVIDER */
+
+.divider {
+    width: 55px;
+    height: 1px;
+
+    background: #D4AF37;
+
+    margin: 0 auto 24px;
+
+    opacity: 0.8;
+}
+
+/* BUTTONS */
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.btn {
+    width: 100%;
+
+    min-height: 59px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    padding: 15px 20px;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    background: transparent;
+
+    border: 1px solid #D4AF37;
+
+    border-radius: 12px;
+
+    transition: 0.2s ease;
+}
+
+.btn:hover {
+    background: rgba(212,175,55,0.08);
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+/* ICONS */
+
+.icon {
+    width: 23px;
+    height: 23px;
+    flex-shrink: 0;
+}
+
+/* FOOTER */
+
+.footer-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 30px;
+}
+
+.footer-line::before,
+.footer-line::after {
+    content: "";
+
+    width: 55px;
+    height: 1px;
+
+    background: #D4AF37;
+
+    opacity: 0.4;
+}
+
+.footer-symbol {
+    margin: 0 12px;
+
+    font-size: 14px;
+
+    color: #D4AF37;
+}
+
+.footer {
+    margin-top: 15px;
+
+    font-size: 11px;
+
+    color: #777777;
+
+    letter-spacing: 1.5px;
+}
+
+/* MOBILE */
+
+@media (max-width: 380px) {
+
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .logo-wrapper {
+        height: 275px;
+    }
+
+    .logo {
+        width: 275px;
+        height: 275px;
+    }
+
+    .store-name {
+        font-size: 20px;
+    }
+
+    .btn {
+        min-height: 55px;
+        font-size: 14px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- LOGO -->
+
+    <div class="logo-wrapper">
+
+        <img
+            src="razor-fade-logo.png.PNG"
+            class="logo"
+            alt="Razor & Fade Atelier"
+        >
+
+    </div>
+
+
+    <!-- NAME -->
+
+    <div class="store-name">
+        RAZOR & FADE ATELIER
+    </div>
+
+
+    <!-- ADDRESS -->
+
+    <div class="address">
+        Πελασγίας 56, Περιστέρι
+    </div>
+
+
+    <div class="divider"></div>
+
+
+    <!-- BUTTONS -->
+
+    <div class="buttons">
+
+
+        <!-- GOOGLE REVIEW -->
+
+        <a
+            class="btn"
+            href="https://search.google.com/local/writereview?placeid=ChIJb2ECXb-joRQRp6Qtlfb8Nyg"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+
+            <svg
+                class="icon"
+                viewBox="0 0 24 24"
+                fill="none"
+            >
+
+                <path
+                    d="M12 3.5l2.63 5.32 5.87.85-4.25 4.14 1 5.85L12 16.9l-5.25 2.76 1-5.85L3.5 9.67l5.87-.85L12 3.5z"
+                    stroke="#D4AF37"
+                    stroke-width="1.8"
+                    stroke-linejoin="round"
+                />
+
+            </svg>
+
+            Αφήστε μας μια κριτική
+
+        </a>
+
+
+        <!-- INSTAGRAM -->
+
+        <a
+            class="btn"
+            href="https://www.instagram.com/razor_fade_atelier"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+
+            <svg
+                class="icon"
+                viewBox="0 0 24 24"
+                fill="none"
+            >
+
+                <rect
+                    x="3.5"
+                    y="3.5"
+                    width="17"
+                    height="17"
+                    rx="5"
+                    stroke="#D4AF37"
+                    stroke-width="1.8"
+                />
+
+                <circle
+                    cx="12"
+                    cy="12"
+                    r="4"
+                    stroke="#D4AF37"
+                    stroke-width="1.8"
+                />
+
+                <circle
+                    cx="17.4"
+                    cy="6.7"
+                    r="1"
+                    fill="#D4AF37"
+                />
+
+            </svg>
+
+            Instagram
+
+        </a>
+
+
+        <!-- EBARBER -->
+
+        <a
+            class="btn"
+            href="https://www.ebarber.gr/en/barbershops/razor-fade-atelier"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+
+            <svg
+                class="icon"
+                viewBox="0 0 24 24"
+                fill="none"
+            >
+
+                <rect
+                    x="4"
+                    y="5"
+                    width="16"
+                    height="15"
+                    rx="2"
+                    stroke="#D4AF37"
+                    stroke-width="1.7"
+                />
+
+                <path
+                    d="M8 3v4M16 3v4M4 9h16"
+                    stroke="#D4AF37"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                />
+
+                <path
+                    d="M8 13h3M8 16h5"
+                    stroke="#D4AF37"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                />
+
+            </svg>
+
+            Book your appointment
+
+        </a>
+
+
+        <!-- LOCATION -->
+
+        <a
+            class="btn"
+            href="https://www.google.com/maps/search/?api=1&query=Razor%20%26%20Fade%20Atelier%2C%20%CE%A0%CE%B5%CE%BB%CE%B1%CF%83%CE%B3%CE%AF%CE%B1%CF%82%2056%2C%20%CE%A0%CE%B5%CF%81%CE%B9%CF%83%CF%84%CE%AD%CF%81%CE%B9&query_place_id=ChIJb2ECXb-joRQRp6Qtlfb8Nyg"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+
+            <svg
+                class="icon"
+                viewBox="0 0 24 24"
+                fill="none"
+            >
+
+                <path
+                    d="M12 21s7-6.2 7-12a7 7 0 10-14 0c0 5.8 7 12 7 12z"
+                    stroke="#D4AF37"
+                    stroke-width="1.8"
+                />
+
+                <circle
+                    cx="12"
+                    cy="9"
+                    r="2.5"
+                    stroke="#D4AF37"
+                    stroke-width="1.8"
+                />
+
+            </svg>
+
+            Βρείτε μας στον χάρτη
+
+        </a>
+
+
+        <!-- PHONE -->
+
+        <a
+            class="btn"
+            href="tel:6988007126"
+        >
+
+            <svg
+                class="icon"
+                viewBox="0 0 24 24"
+                fill="none"
+            >
+
+                <path
+                    d="M6.5 3.8l3 3.1-2 2.5c1.2 2.5 2.6 3.9 5.1 5.1l2.5-2 3.1 3c.7.7.7 1.8 0 2.4l-1.3 1.3c-.8.8-2 1.1-3.1.7-5.4-1.9-9.8-6.3-11.7-11.7-.4-1.1-.1-2.3.7-3.1l1.3-1.3c.6-.7 1.7-.7 2.4 0z"
+                    stroke="#D4AF37"
+                    stroke-width="1.7"
+                    stroke-linejoin="round"
+                />
+
+            </svg>
+
+            698 800 7126
+
+        </a>
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <div class="footer-line">
+
+        <div class="footer-symbol">
+            ✦
+        </div>
+
+    </div>
+
+
+    <div class="footer">
+        © RAZOR & FADE ATELIER
+    </div>
+
+</div>
+
+</body>
+</html>
